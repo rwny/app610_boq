@@ -33,14 +33,6 @@
 
       #boqContent {
          display: none;
-         overflow: auto;
-         max-height: 100vh;
-      }
-
-      #searchInput {
-         width: 100%;
-         padding: 10px;
-         margin-bottom: 20px;
       }
 
       .calculator {
@@ -61,54 +53,11 @@
          text-align: right;
       }
    </style>
-   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
-   <div id="appContainer">
-      <div id="tableContainer">
-         <div id="boqContent"></div>
-         <div id="tableResizer" class="resizer"></div>
-      </div>
-      
-      <div id="sidebar">
-         <div id="sidebarContent">
-            <!-- Add row count display at the top of sidebar -->
-            <div id="dataRowCount" class="row-count-display"></div>
-            
-            <div class="control-panel">
-               <!-- Hide row limit toggle from UI -->
-               <div class="toggle-container" style="display: none;">
-                  <label for="rowLimitToggle">
-                     <input type="checkbox" id="rowLimitToggle"> Show 50 random rows
-                  </label>
-               </div>
-               <!-- Hide row count info -->
-               <div id="rowCountInfo" style="display: none;"></div>
-               
-               <!-- Hide theme toggle from UI -->
-               <div class="toggle-container" style="display: none;">
-                  <label for="themeToggle">
-                     <input type="checkbox" id="themeToggle"> Dark Theme
-                  </label>
-               </div>
-               
-               <div class="search-area">
-                  <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
-               </div>
-            </div>
-            
-            <div class="calculator">
-               <div id="calcResult"></div>
-               <input type="text" id="calcInput" placeholder="Enter calculation..." autocomplete="off">
-            </div>
-         </div>
-         <div id="sidebarResizer"></div>
-      </div>
-   </div>
 
    <script src="boq_loader.js"></script>
-   <script src="search.js"></script>
-   <script src="calculator.js"></script>
+
 </body>
 </html>
